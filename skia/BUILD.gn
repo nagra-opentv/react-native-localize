@@ -1,0 +1,35 @@
+#ReactNativeLocalize
+
+import("//react-native/common.gni")
+
+config("LibRNLocalizeModule_config") {
+  cflags_cc = [ "-std=c++17"]
+  cflags_cc += [
+    "-Wno-extra-semi",
+    "-Wno-sign-compare",
+    "-Wno-header-hygiene",
+  ]
+
+  include_dirs = [ ".",
+                  "//react-native/ReactCommon/",
+                ]
+}
+
+rn_cxx_component("RNLocalize") {
+
+  # RS Native module and its dependencies
+  sources = [
+    "RNLocalizeModule.h",
+    "RNLocalizeModule.cpp",
+  ]
+
+  public_configs = [ ":LibRNLocalizeModule_config" ]
+  public_configs += [ "//build/secondary/folly:folly_config" ]
+  deps = [
+    "//folly",
+    "//skia",
+  ]
+
+  with_exceptions = true
+  with_rtti = true
+}
