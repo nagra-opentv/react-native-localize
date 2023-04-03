@@ -18,8 +18,9 @@ namespace xplat {
 class RNLocalizeModule : public module::CxxModule {
  public:
   RNLocalizeModule();
-  virtual auto getConstants() -> std::map<std::string, folly::dynamic>;
-  virtual auto getMethods() -> std::vector<Method>;
+  std::map<std::string, folly::dynamic> getConstants() override;
+  std::vector<Method> getMethods() override;
+  std::string getName() override;
 };
 
 } // xplat

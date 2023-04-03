@@ -8,10 +8,8 @@
 
 #include "RNLocalizeModule.h"
 
-using namespace folly;
 namespace facebook {
 namespace xplat {
-
 RNLocalizeModule::RNLocalizeModule() { }
 
 std::map<std::string, folly::dynamic> RNLocalizeModule::getConstants() {
@@ -40,13 +38,13 @@ auto RNLocalizeModule::getMethods() -> std::vector<Method> {
     return {
     Method(
     "addListener",
-    [&] (dynamic args){
+    [&] (folly::dynamic args){
       RNS_LOG_NOT_IMPL;
       return ;
       }),
     Method(
     "removeListener",
-    [&] (dynamic args){
+    [&] (folly::dynamic args){
       RNS_LOG_NOT_IMPL;
       return ;
       }),
