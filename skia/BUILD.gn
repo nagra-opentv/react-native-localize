@@ -17,7 +17,7 @@ config("LibRNLocalizeModule_config") {
 
 rn_cxx_tp_component("RNLocalize") {
 
-  # RS Native module and its dependencies
+  # Native module and its dependencies
   sources = [
     "RNLocalizeModule.h",
     "RNLocalizeModule.cpp",
