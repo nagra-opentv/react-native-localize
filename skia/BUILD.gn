@@ -15,7 +15,7 @@ config("LibRNLocalizeModule_config") {
                 ]
 }
 
-rn_cxx_tp_component("rnlocalize") {
+rns_cxx_tp_component("rnlocalize") {
 
   # Native module and its dependencies
   sources = [
