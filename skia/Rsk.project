@@ -1,0 +1,12 @@
+{
+  "codegenConfig": {
+    "name": "rnlocalize",
+    "version": "2.1.1",
+    "type": "modules",
+    "skia": {
+      "TurboModuleRegistryGetEnforcingSpec" : [ 
+        "RNLocalize"
+      ]   
+    }   
+  }
+}
